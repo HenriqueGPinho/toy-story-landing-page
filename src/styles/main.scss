@@ -1,0 +1,24 @@
+@use 'var';
+@use 'header';
+@use 'hero';
+@use 'historia';
+@use 'trailers';
+@use 'onde-assistir';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  list-style: none;
+  color: var.$mainTextColor;
+}
+
+body {
+  background-color: var.$mainBackgroundColor;
+}
+
+section {
+  min-height: 320px;
+}
+
