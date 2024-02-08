@@ -4,14 +4,16 @@
   align-items: center;
 
   &__logo {
-    max-height: 64px;
+    max-height: 58px;
     margin: 16px;
   }
 
   &__nav {
 
+    margin: 0 16px;
     &__list {
       display: flex;
+      list-style: none;
       &__item {
         padding: 8px;
       }
