@@ -22,6 +22,11 @@
       list-style: none;
       &__item {
         padding: 8px;
+
+        a {
+          text-decoration: none;
+          color: var.$mainTextColor;
+        }
       }
     }
 
