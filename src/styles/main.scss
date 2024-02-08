@@ -1,24 +1,42 @@
 @use 'var';
 @use 'header';
 @use 'hero';
-@use 'historia';
-@use 'trailers';
-@use 'onde-assistir';
+@use 'sobre';
+@use 'filmes';
+@use 'personagens';
+
+/*
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+*/
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  list-style: none;
-  color: var.$mainTextColor;
 }
 
 body {
   background-color: var.$mainBackgroundColor;
 }
 
-section {
+@mixin title($fontSize: 40px) {
+  font-size: $fontSize;
+  color: var.$mainTextColor;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+}
+
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  color: var.$mainTextColor;
+}
+
+.section {
   min-height: 320px;
+
+  &__title {
+    @include title();
+  }
 }
 
