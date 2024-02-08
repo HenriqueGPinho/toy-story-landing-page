@@ -33,6 +33,13 @@ body {
   @include title(16px);
 }
 
+.container {
+  @media (min-width: var.$mediaMinWidth) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .section {
   display: flex;
   flex-direction: column;
@@ -44,6 +51,10 @@ body {
 
   &__title {
     @include title();
+
+    @media (min-width: var.$mediaMinWidth) {
+      @include title(32px);
+    }
   }
 
   &__text {

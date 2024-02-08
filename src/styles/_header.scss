@@ -1,16 +1,22 @@
+@use 'var';
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   &__logo {
-    max-height: 58px;
+    max-height: 56px;
     margin: 16px;
+
+    @media (min-width: var.$mediaMinWidth) {
+      max-height: 72px;
+    }
   }
 
   &__nav {
-
     margin: 0 16px;
+    
     &__list {
       display: flex;
       list-style: none;
@@ -18,5 +24,13 @@
         padding: 8px;
       }
     }
+
+    @media (min-width: var.$mediaMinWidth) {
+      display: none;
+    }
+  }
+
+  @media (min-width: var.$mediaMinWidth) {
+    justify-content: center;
   }
 }
